@@ -1,0 +1,21 @@
+<br/><br/><br/><br/><h1>edit</h1>
+
+
+<div class="well">
+    <label>Id:</label>
+    <input id="wineId" name="id" type="text" value="<%= model.get("_id") %>" disabled />
+
+    <label>Name:</label>
+    <input type="text" id="name" name="name" value="<%= model.get("name") %>" required/>
+
+    <label>Grapes:</label>
+    <input type="text" id="grapes" name="grapes" value="<%= model.get("artist") %>"/>
+
+
+   <div>
+
+    <button type="button" class="btn btn-primary save">Save</button>
+    <button type="button" class="btn delete">Delete</button>
+    <a href="/">back</a>
+</div>
+</div>
