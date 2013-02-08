@@ -1,9 +1,9 @@
 mondgo
 ======
 
-Stub Code For a crud application
+Stub Code For a crud application. Very alpha release.
 
 Slim
 MongoDB
-Backbone.js
+Backbone boilerplate
 Twitter Bootstrap
