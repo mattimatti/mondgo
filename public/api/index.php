@@ -28,21 +28,21 @@ session_start();
 
 
 // set environment
-$whitelist = array('pipeline.matti', '127.0.0.1');
+$whitelist = array('mondgo.matti', '127.0.0.1');
 
 if(in_array($_SERVER['HTTP_HOST'], $whitelist)){
 
     define("ENVIRONMENT", 'development');
-    define("HOST", 'http://pipeline.matti');
+    define("HOST", 'http://mondgo.matti');
     define("BASE_FOLDER", '');
     error_reporting(E_ALL);
     ini_set('display_errors', "1");
 
-}else if($_SERVER['HTTP_HOST'] == "cfpatientcases.xc-events.it"){
+}else if($_SERVER['HTTP_HOST'] == "xxxxxxx.com"){
 
    define("ENVIRONMENT", 'production');
    define("BASE_FOLDER", '');
-   define("HOST", 'http://cfpatientcases.xc-events.it');
+   define("HOST", 'http://xxxxxxx.com');
    
    error_reporting(E_ALL);
    ini_set('display_errors', 1);
@@ -52,7 +52,7 @@ if(in_array($_SERVER['HTTP_HOST'], $whitelist)){
 }else{
   
    define("ENVIRONMENT", 'staging');
-   define("HOST", 'http://pipeline.mattimatti.com');
+   define("HOST", 'http://staging.xxxxxxx.com');
    define("BASE_FOLDER", '');
    error_reporting(0);
    ini_set('display_errors', 0);
@@ -152,14 +152,6 @@ TwigView::$twigOptions = array('cache' => false, 'auto_reload' => true);
 
 
 
-
-
-
-
-
-
-
-
 define('MONGO_HOST', '127.0.0.1');
 
 
@@ -192,7 +184,7 @@ $app->hook('slim.before', function () use ($app) {
 
 
 
-include '../../routes/application.php';
+//include '../../routes/application.php';
 include '../../routes/rest.php';
 
 $app->run();
